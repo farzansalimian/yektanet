@@ -1,7 +1,8 @@
 import React from 'react';
+import DataTablePage from '../features/dataTable/DataTablePage';
 
 function App() {
-  return null;
+  return <DataTablePage />;
 }
 
 export default App;
