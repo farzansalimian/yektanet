@@ -1,11 +1,13 @@
 const FILTER_KEYS = {
-  id: 'id',
   name: 'name',
   date: 'date',
   title: 'title',
   field: 'field',
-  old_value: 'old_value',
-  new_value: 'new_value',
+  oldValue: 'old_value',
+  newValue: 'new_value',
+  page: 'page',
+  sortBy: 'sortBy',
+  isDescending: 'isDescending',
 };
 
 Object.preventExtensions(FILTER_KEYS);

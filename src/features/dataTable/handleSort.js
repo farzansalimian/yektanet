@@ -18,11 +18,11 @@ function handleSort(onSorByKey = () => {}) {
   };
 
   const sorByNewValue = () => {
-    onSorByKey(FILTER_KEYS.new_value);
+    onSorByKey(FILTER_KEYS.newValue);
   };
 
   const sorByOldValue = () => {
-    onSorByKey(FILTER_KEYS.old_value);
+    onSorByKey(FILTER_KEYS.oldValue);
   };
 
   return { sorByName, sorByDate, sorByField, sorByTitle, sorByNewValue, sorByOldValue };
