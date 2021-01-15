@@ -14,7 +14,7 @@ import handleSort from './handleSort';
 import Input from '../../components/input/Input';
 import './styles.css';
 import Button from '../../components/button/Button';
-import TableTh from './TableTh';
+import TableColumn from './TableColumn';
 import FILTER_KEYS from '../../constants/filterKeys';
 import TableRow from './TableRow';
 import FILTER_PLACE_HOLDERS from '../../constants/filterPlaceHolders';
@@ -75,37 +75,37 @@ function DataTablePage() {
         <table className={'table'}>
           <thead>
             <tr>
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.name}
                 isDescending={isDescending}
                 onClick={sorByName}
                 text={FILTER_PLACE_HOLDERS.name}
               />
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.date}
                 isDescending={isDescending}
                 onClick={sorByDate}
                 text={FILTER_PLACE_HOLDERS.date}
               />
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.title}
                 isDescending={isDescending}
                 onClick={sorByTitle}
                 text={FILTER_PLACE_HOLDERS.title}
               />
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.field}
                 isDescending={isDescending}
                 onClick={sorByField}
                 text={FILTER_PLACE_HOLDERS.field}
               />
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.oldValue}
                 isDescending={isDescending}
                 onClick={sorByOldValue}
                 text={FILTER_PLACE_HOLDERS.old_value}
               />
-              <TableTh
+              <TableColumn
                 hasSortIcon={sortBy === FILTER_KEYS.newValue}
                 isDescending={isDescending}
                 onClick={sorByNewValue}

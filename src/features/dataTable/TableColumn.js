@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ArrowIcon } from '../../assets/svgIcons';
 
-function TableTh(props) {
+function TableColumn(props) {
   const { onClick, text, hasSortIcon, isDescending } = props;
 
   return (
@@ -17,15 +17,15 @@ function TableTh(props) {
   );
 }
 
-TableTh.defaultProps = {
+TableColumn.defaultProps = {
   hasSortIcon: false,
   isDescending: false,
 };
-TableTh.propTypes = {
+TableColumn.propTypes = {
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   isDescending: PropTypes.bool,
   hasSortIcon: PropTypes.bool,
 };
 
-export default TableTh;
+export default TableColumn;
