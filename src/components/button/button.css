@@ -1,0 +1,14 @@
+.button {
+    background-color: bisque;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 8px;
+    color: black;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+    border-color: #3498db;
+}
