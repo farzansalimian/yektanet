@@ -25,6 +25,7 @@ function handleDataChanges({ itemsPerPage = 10 } = {}) {
     // Get search params from url and apply filter
     let searchParams = new URLSearchParams(window.location.search);
     const validKeys = Object.values(FILTER_KEYS);
+    // Todo: remove case sensitivity
     for (const [key, value] of searchParams) {
       // Validate sort direction
       if (key === FILTER_KEYS.isDescending) initialFilters[key] = value === 'true';
@@ -90,6 +91,7 @@ function handleDataChanges({ itemsPerPage = 10 } = {}) {
   };
 
   // Filter and sort data base on its condition
+  // Todo : implement binary search for other keys
   const debouncedFilterAndSort = useDebounce(200, (keywordsFilter, key, value) => {
     // If sort is by date and new added keyword is also date which did not have value before do binary search
     if (sortBy === FILTER_KEYS.date && key === FILTER_KEYS.date && !filters[key] && value) {
