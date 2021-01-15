@@ -48,6 +48,16 @@ src/utils/sortUtils.js -> Sort utilities
 
 -----------------------------------------
 
+## Requiements:
+
+Filter - sort - url : src/features/dataTable/handleDataChanges.js
+
+BST: src/utils/filterUils-> filterByBinarySearch
+
+Local storage saving : src/features/dataTable/TableRow.js
+
+--------------------------------------
+
 
 
 ## How does it work?
