@@ -25,7 +25,7 @@ function handleDataChanges({ itemsPerPage = 10 } = {}) {
     // Get search params from url and apply filter
     let searchParams = new URLSearchParams(window.location.search);
     const validKeys = Object.values(FILTER_KEYS);
-    // Todo: remove case sensitivity
+    // Todo: remove case sensitivity and add better validations
     for (const [key, value] of searchParams) {
       // Validate sort direction
       if (key === FILTER_KEYS.isDescending) initialFilters[key] = value === 'true';
@@ -53,7 +53,14 @@ function handleDataChanges({ itemsPerPage = 10 } = {}) {
       setAllItems(filterByBinarySearch(allItems, value, FILTER_KEYS.date, filters.isDescending));
     } else {
       // Otherwise filter and sort based on initial data
-      filterAndSortByKeywords(initialData, keywordsFilter);
+      setAllItems(
+        filterAndSortByKeywords(
+          initialData,
+          keywordsFilter,
+          initialFilters.sortBy,
+          initialFilters.isDescending,
+        ),
+      );
       setFilters(initialFilters);
     }
   }, []);
